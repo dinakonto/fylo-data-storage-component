@@ -6,6 +6,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
 
   <title>Frontend Mentor | Fylo data storage component</title>
 
@@ -27,14 +29,18 @@
     <div id="storage">
       <div id="usage">
         <p>You’ve used <strong>815 GB</strong> of your storage</p>
-        <div id="bar"></div>
+        <div id="bar-bg">
+          <div id="bar"></div>
+          <div id="bar-dot"></div>
+        </div>
         <div class="bar-axes">
           <span class="bar-axis">0 GB</span>
           <span class="bar-axis">1000 GB</span>
       </div>
     </div>
-    <div id="space-left"><span class="key-num">185</span> GB Left</div>
+    <div id="space-left"><span id="key-num">185</span> GB Left</div>
   </div>
 
+  <script src="js/bar.js"></script>
 </body>
 </html>

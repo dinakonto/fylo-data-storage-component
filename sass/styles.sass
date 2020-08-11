@@ -1,7 +1,3 @@
-/* TODO:
- * - animate storage bar
- */
-
 //Typography
 $font-stack: 'Raleway', sans-serif
 $base-font-size: 14px
@@ -108,30 +104,30 @@ body
   margin-top: -20px
   padding-bottom: 20px
 
-.key-num
+#key-num
   color: $primary-dark
   font-size: 36px
   margin-right: 10px
   margin-top: -10px
 
-#bar
+#bar-bg
   background: $primary-dark
   border-radius: 50px
   height: 20px
   position: relative
 
-#bar::before
+#bar
   position: absolute
   top: 4px
   left: 4px
   height: 12px
-  width: 80%
+  width: 13px
   content: ""
   background: $gradient
   border-radius: 10px
   transition: all 0.3s ease
 
-#bar::after
+#bar-dot
   position: absolute
   content: ""
   background: white
@@ -139,7 +135,7 @@ body
   width: 8px
   border-radius: 10px
   top: 6px
-  left: calc(80% - 6px)
+  left: 6px
   transition: all 0.3s ease
 
 .bar-axes
