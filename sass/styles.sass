@@ -1,0 +1,133 @@
+//Typography
+$font-stack: 'Raleway', sans-serif
+$base-font-size: 14px
+$type-bold: 700
+$type-reg: 400
+//Color palette
+$primary-light: hsl(243, 100%, 93%)
+$primary-med: hsl(228, 56%, 26%)
+$primary-dark: hsl(229, 57%, 11%)
+$secondary: hsl(229, 7%, 55%)
+$gradient: linear-gradient(to right, hsl(6, 100%, 80%) , hsl(335, 100%, 65%))
+
+/****************
+ * STYLES
+ ****************/
+
+*
+  box-sizing: border-box
+
+body
+  font: 100% $font-stack
+  font-size: $base-font-size
+  color: $primary-light
+  background: url("../images/bg-mobile.png") $primary-dark
+  background-size: cover
+  padding: 25px
+  margin: 0
+  display: flex
+  height: 100vh
+  align-items: center
+
+#container
+  width: 100%
+  display: grid
+  grid-gap: 15px
+
+#header,
+#storage
+  background: $primary-med
+  padding: 40px
+  border-radius: 10px
+  -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.1)
+  -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.1)
+  box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.1)
+
+/* Header panel*/
+#header
+  border-top-right-radius: 100px
+
+#header .logo
+  height: 40px
+  margin-bottom: 30px
+
+.actions ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+  display: flex
+
+.actions ul li
+  margin-right: 15px
+
+.actions button
+  height: 45px
+  width: 45px
+  border: none
+  border-radius: 10px
+  background: $primary-dark
+  cursor: pointer
+
+.actions svg
+  fill: #6A7ED7
+
+/* Storage panel */
+#storage
+  position: relative
+  text-align: center
+
+#space-left
+  position: absolute
+  top: 78%
+  // Improve this calc
+  left: calc(50% - 90px)
+  background: white
+  color: $primary-dark
+  padding: 23px 25px 18px 25px
+  border-radius: 10px
+  text-transform: uppercase
+  font-weight: $type-bold
+  color: $secondary
+  display: flex
+  align-items: center
+
+#usage
+  margin-top: -20px
+  padding-bottom: 20px
+
+.key-num
+  color: $primary-dark
+  font-size: 36px
+  margin-right: 10px
+  margin-top: -10px
+
+#bar
+  background: $primary-dark
+  border-radius: 50px
+  height: 20px
+  position: relative
+
+#bar::before
+  position: absolute
+  top: 4px
+  left: 4px
+  height: 12px
+  width: 80%
+  content: ""
+  background: $gradient
+  border-radius: 10px
+
+#bar::after
+  position: absolute
+  content: ""
+  background: white
+  height: 8px
+  width: 8px
+  border-radius: 10px
+  top: 6px
+  left: calc(80% - 6px)
+
+.bar-axes
+  display: flex
+  justify-content: space-between
+  margin-top: 10px
