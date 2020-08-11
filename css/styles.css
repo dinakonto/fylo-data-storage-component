@@ -1,3 +1,6 @@
+/* TODO:
+ * * - animate storage bar
+ * */
 /****************
  * * STYLES
  * ****************/
@@ -16,11 +19,13 @@ body {
   display: flex;
   height: 100vh;
   align-items: center;
+  justify-content: center;
 }
 
 #container {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-gap: 15px;
 }
 
@@ -62,9 +67,15 @@ body {
   border-radius: 10px;
   background: #0c122c;
   cursor: pointer;
+  fill: #6A7ED7;
 }
 
-.actions svg {
+.actions button:hover, .actions button:focus {
+  fill: white;
+  outline: none;
+}
+
+.actions button:active {
   fill: #6A7ED7;
 }
 
@@ -87,6 +98,7 @@ body {
   color: #848794;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 #usage {
@@ -117,6 +129,7 @@ body {
   content: "";
   background: linear-gradient(to right, #ffa399, #ff4d97);
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 #bar::after {
@@ -128,12 +141,54 @@ body {
   border-radius: 10px;
   top: 6px;
   left: calc(80% - 6px);
+  transition: all 0.3s ease;
 }
 
 .bar-axes {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    background: url("../images/bg-desktop.png") #0c122c;
+    background-position: 0 110%;
+    background-repeat: no-repeat;
+  }
+
+  #container {
+    flex-direction: row;
+    max-width: 920px;
+    align-items: flex-end;
+  }
+
+  #header {
+    min-width: 350px;
+  }
+
+  #storage {
+    height: 150px;
+    width: 100%;
+    text-align: left;
+  }
+
+  #space-left {
+    position: absolute;
+    top: -50px;
+    left: auto;
+    right: 40px;
+  }
+
+  #space-left::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border-width: 20px;
+    border-color: transparent white transparent transparent;
+    border-style: solid;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
