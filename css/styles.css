@@ -5,12 +5,18 @@
   box-sizing: border-box;
 }
 
+html {
+  background: url("../images/bg-mobile.png") no-repeat center center fixed #0c122c;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   font: 100% "Raleway", sans-serif;
   font-size: 14px;
   color: #dddbff;
-  background: url("../images/bg-mobile.png") #0c122c;
-  background-size: cover;
   padding: 25px;
   margin: 0;
   display: flex;
@@ -23,7 +29,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  grid-gap: 15px;
 }
 
 #header,
@@ -39,6 +44,7 @@ body {
 /* Header panel*/
 #header {
   border-top-right-radius: 100px;
+  margin-bottom: 15px;
 }
 
 #header .logo {
@@ -152,9 +158,10 @@ body {
 }
 
 @media screen and (min-width: 750px) {
-  body {
+  html {
     background: url("../images/bg-desktop.png") #0c122c;
-    background-position: 0 110%;
+    background-position: left 0 bottom 0;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 
@@ -166,6 +173,8 @@ body {
 
   #header {
     min-width: 350px;
+    margin-bottom: 0;
+    margin-right: 15px;
   }
 
   #storage {

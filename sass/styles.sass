@@ -17,19 +17,23 @@ $gradient: linear-gradient(to right, hsl(6, 100%, 80%) , hsl(335, 100%, 65%))
 *
   box-sizing: border-box
 
-hmtl, body
-  height: 100%
+html
+  background: url("../images/bg-mobile.png") no-repeat center center fixed $primary-dark
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
 
 body
   font: 100% $font-stack
   font-size: $base-font-size
   color: $primary-light
-  background: url("../images/bg-mobile.png") $primary-dark
-  background-size: cover
+  // background: url("../images/bg-mobile.png") $primary-dark
+  // background-size: cover
   padding: 25px
   margin: 0
   display: flex
-  // height: 100vh
+  height: 100vh
   align-items: center
   justify-content: center
 
@@ -37,7 +41,6 @@ body
   width: 100%
   display: flex
   flex-direction: column
-  grid-gap: 15px
 
 #header,
 #storage
@@ -47,11 +50,11 @@ body
   -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.1)
   -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.1)
   box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.1)
-  // transition: all 0.3s ease
 
 /* Header panel*/
 #header
   border-top-right-radius: 100px
+  margin-bottom: 15px
 
 #header .logo
   height: 40px
@@ -151,9 +154,10 @@ body
 
 
 @media screen and (min-width: 750px)
-  body
+  html
     background: url("../images/bg-desktop.png") $primary-dark
-    background-position: 0 110%
+    background-position: left 0 bottom 0
+    background-size: contain
     background-repeat: no-repeat
   #container
     flex-direction: row
@@ -161,6 +165,8 @@ body
     align-items: flex-end
   #header
     min-width: 350px
+    margin-bottom: 0
+    margin-right: 15px
   #storage
     height: 150px
     width: 100%
