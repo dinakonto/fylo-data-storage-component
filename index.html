@@ -28,7 +28,7 @@
 
     <div id="storage">
       <div id="usage">
-        <p>You’ve used <strong>815 GB</strong> of your storage</p>
+        <p>You’ve used <span id="gb-used">0 GB</span> of your storage</p>
         <div id="bar-bg">
           <div id="bar">
             <div id="bar-dot"></div>
@@ -36,10 +36,10 @@
         </div>
         <div class="bar-axes">
           <span class="bar-axis">0 GB</span>
-          <span class="bar-axis">1000 GB</span>
+          <span class="bar-axis"><span id="gb-total">0</span> GB</span>
       </div>
     </div>
-    <div id="space-left"><span id="key-num">185</span> GB Left</div>
+    <div id="space-left"><span id="gb-left"></span> GB Left</div>
   </div>
 
   <script src="js/bar.js"></script>
